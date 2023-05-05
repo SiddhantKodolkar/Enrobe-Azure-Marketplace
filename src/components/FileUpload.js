@@ -8,8 +8,8 @@ import { BlobServiceClient } from "@azure/storage-blob";
  */
 async function FileUpload(file, containerName) {
   try {
-    let storageAccount = "miniprojectcc";
-    let sasToken = "?sv=2021-12-02&ss=b&srt=sco&sp=rwdlaciytfx&se=2023-05-02T22:16:22Z&st=2023-05-02T14:16:22Z&spr=https&sig=lsbvj40Xce7Nl1NIsJDLdULgGnFzprsYdOnLnazJ%2Bco%3D";
+    let storageAccount = "<Your Storage account name>";
+    let sasToken = "<Your SAS Token>";
 
     const blobService = new BlobServiceClient(
       `https://${storageAccount}.blob.core.windows.net/${sasToken}`

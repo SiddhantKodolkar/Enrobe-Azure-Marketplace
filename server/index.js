@@ -9,10 +9,10 @@ app.use(cors());
 
 // Azure SQL Database configuration
 const config = {
-  user: 'sqladmin',
-  password: 'React@Azure',
-  server: 'siddhantserver.database.windows.net',
-  database: 'SiddhantDatabase',
+  user: '<username>',
+  password: '<password>',
+  server: '<servername>.database.windows.net',
+  database: '<Database name>',
   options: {
     encrypt: true // For security reasons
   }

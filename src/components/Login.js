@@ -76,7 +76,7 @@ class Login extends React.Component {
               <div className="flex flex-col justify-center items-center h-full">
                 <p className='mb-2'>You are logged in as {user.name}</p>
                 <button onClick={this.logout} className='mb-2 text-white bg-black hover:bg-white hover:text-black font-bold py-2 px-4 border-double border-4 border-white rounded hover:transition-bg duration-700'>Logout</button>
-                {user.name === "Siddhant Kodolkar"?
+                {user.name === "<Admin Name>"?
                   (
                     <Link to="/admin" target="_blank" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 mb-2 text-sm font-medium hover:transition-bg duration-500">Click to proceed as Admin → </Link>
                   ):

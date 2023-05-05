@@ -7,12 +7,12 @@ const Feedbacks = () => {
 
   useEffect(() => {
     // Initialize the BlobServiceClient
-    const accountName = 'miniprojectcc';
-    const sasToken = '?sv=2021-12-02&ss=b&srt=sco&sp=rwdlaciytfx&se=2023-05-02T22:16:22Z&st=2023-05-02T14:16:22Z&spr=https&sig=lsbvj40Xce7Nl1NIsJDLdULgGnFzprsYdOnLnazJ%2Bco%3D';
+    const accountName = '<Your Storage account name>';
+    const sasToken = '<Your SAS Token>';
     const blobServiceClient = new BlobServiceClient(`https://${accountName}.blob.core.windows.net?${sasToken}`);
 
     // Get a reference to the container
-    const containerName = 'container1';
+    const containerName = '<Container Name>';
     const containerClient = blobServiceClient.getContainerClient(containerName);
 
     // List the blobs in the container

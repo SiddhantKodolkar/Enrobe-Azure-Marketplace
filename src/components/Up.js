@@ -21,15 +21,17 @@ registerPlugin(
 
 function Up() {
   const [pdfFile, setpdfFile] = useState([]);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const filePondPdfRef = useRef(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const containerName = "container1";
+    const containerName = "<Your Container Name>";
 
     const fileString = await FileUpload(pdfFile, containerName);
     console.log("url string:", fileString);
+    setIsSubmitted(true);
   };
 
   return (
@@ -90,6 +92,7 @@ function Up() {
             >
               Submit
             </button>
+            {isSubmitted && <p className="text-center text-green-500 font-bold">Bill Submitted Successfully!</p>}
           </form>
         </main>
       </div>
